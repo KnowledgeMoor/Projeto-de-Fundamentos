@@ -1,7 +1,6 @@
-echo "# Projeto-de-Fundamentos" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/KnowledgeMoor/Projeto-de-Fundamentos.git
-git push -u origin main
+Trabalho 02 - Desenvolvimento Web e
+Versionamento: Explorando Sistemas de
+Numeração e Integração com o GitHub
+
+integrante : Gabriel Euripedes Vieira Correa
+
