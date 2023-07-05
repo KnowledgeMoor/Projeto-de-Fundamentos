@@ -1,6 +1,7 @@
-Trabalho 02 - Desenvolvimento Web e
+Trabalho 02 de Fundamentos de Sistemas para Internet - Desenvolvimento Web e
 Versionamento: Explorando Sistemas de
 Numeração e Integração com o GitHub
 
 integrante : Gabriel Euripedes Vieira Correa
-
+Objetivo : criar uma página web estática que apresente informações sobre os sistemas de numeração (binário, decimal e
+hexadecimal). A página também deve possuir funcionalidades para converter numeros de um sistema de numeração para um outro.
