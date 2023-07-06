@@ -55,19 +55,34 @@
             width: 800px;
             margin-bottom: 30px;
         }
-        main > div > div:nth-of-type(5) {
+
+        main>div>div:nth-of-type(5) {
             flex-direction: column;
             border: 2px solid white;
             padding: 20px;
             border-radius: 50px;
         }
+        main>div>div:nth-of-type(6) {
+            flex-direction: column;
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 50px;
+        }
+        main>div>div:nth-of-type(6) h3 {
+            margin-top: 20px;
+        }
+
         main>div:nth-of-type(1)>div>img:nth-of-type(1) {
             margin-right: 40px;
+        }
+        input, button {
+            width: 200px;
         }
 
         main ul {
             margin: 10px 0px;
         }
+
         footer {
             height: 100px;
             display: flex;
@@ -125,12 +140,123 @@
                     Por exemplo, o número decimal 79 (cuja representação binária é 01001111) pode ser escrito como 4F em
                     hexadecimal (4 = 0100, F = 1111). Cada dígito hexadecimal consegue representar 4 bits.</p>
             </div>
-            <h2>Exemplos de conversões</h2> <div> <h3>Decimal para binário : </h3> <ul> <li>Considere o 53 a ser convertido;</li> <li>53/2 = 26 e resto 1 - anote o resto: 1</li> <li>26/2 = 13 e resto 0 - anote o resto: 0</li> <li>13/2 = 6 e resto 1 - anote o resto: 1</li> <li>6/2 = 3 e resto 0 - anote o resto: 0</li> <li>3/2 = 1 e resto 1 - anote o resto: 1</li> <li>1/2 = 0 e resto 1 - anote o resto: 1</li> </ul> <h3>Binário para decimal : </h3> <ul> <li>Por exemplo, o número binário 1011;</li> <li>(1 x 23) + (0 x 22) + (1 x 21) + (1 x 20);</li> </ul> <h3>Decimal para hexadecimal : </h3> <ul> <li>Considere o número decimal 242;</li> <li>242/16 = 15 e resto 2 - anote o resto: 2</li> <li>15/16 = 0 e resto 15 - anote o resto: 15</li> <li>0/16 = 0 e resto 0 - anote o resto: 0</li> <li>Organizando do ultimo ao primeiro temos o números decimais: 0, 15, 2</li> <li>Então temos: F2;</li> </ul> <h3>Hexadecimal para decimal : </h3> <ul> <li>Considere o número hexadecimal F2;</li> <li>Identifique cada digito hexadecimal e seu valor decimal correspondente: <li>F = 15</li> <li>2 = 2</li> </li> <li>(15 x 161) + (2 x 160) = 240 + 2 = 242</li> <li>E para o número 1AB8?</li> </ul> </div>
+            <h2>Exemplos de conversões</h2>
+            <div>
+                <h3>Decimal para binário : </h3>
+                <ul>
+                    <li>Considere o 53 a ser convertido;</li>
+                    <li>53/2 = 26 e resto 1 - anote o resto: 1</li>
+                    <li>26/2 = 13 e resto 0 - anote o resto: 0</li>
+                    <li>13/2 = 6 e resto 1 - anote o resto: 1</li>
+                    <li>6/2 = 3 e resto 0 - anote o resto: 0</li>
+                    <li>3/2 = 1 e resto 1 - anote o resto: 1</li>
+                    <li>1/2 = 0 e resto 1 - anote o resto: 1</li>
+                </ul>
+                <h3>Binário para decimal : </h3>
+                <ul>
+                    <li>Por exemplo, o número binário 1011;</li>
+                    <li>(1 x 23) + (0 x 22) + (1 x 21) + (1 x 20);</li>
+                </ul>
+                <h3>Decimal para hexadecimal : </h3>
+                <ul>
+                    <li>Considere o número decimal 242;</li>
+                    <li>242/16 = 15 e resto 2 - anote o resto: 2</li>
+                    <li>15/16 = 0 e resto 15 - anote o resto: 15</li>
+                    <li>0/16 = 0 e resto 0 - anote o resto: 0</li>
+                    <li>Organizando do ultimo ao primeiro temos o números decimais: 0, 15, 2</li>
+                    <li>Então temos: F2;</li>
+                </ul>
+                <h3>Hexadecimal para decimal : </h3>
+                <ul>
+                    <li>Considere o número hexadecimal F2;</li>
+                    <li>Identifique cada digito hexadecimal e seu valor decimal correspondente:
+                    <li>F = 15</li>
+                    <li>2 = 2</li>
+                    </li>
+                    <li>(15 x 161) + (2 x 160) = 240 + 2 = 242</li>
+                    <li>E para o número 1AB8?</li>
+                </ul>
+            </div>
+            <h2>Conversor</h2>
+            <div class="conversor">
+                <h3>Conversor Decimal</h3>
+                <label for="decimal">Número decimal:</label>
+                <input type="text" id="decimal">
+                <button onclick="converterDecBin()">Converter</button>
+                <p id="resultadoBinario"></p>
+                <p id="resultadoHexadecimal"></p>
+
+                <h3>Conversor Binário</h3>
+                <label for="binario">Número binário:</label>
+                <input type="text" id="binario">
+                <button onclick="converterBinDec()">Converter</button>
+                <p id="resultadoDecimal"></p>
+                <p id="resultadobinHexadecimal"></p>
+
+
+                <h3>Conversor Hexadecimal</h3>
+                <label for="hexadecimal">Número Hexadecimal:</label>
+                <input type="text" id="hexadecimalDec">
+                <button onclick="converterHexDec()">Converter</button>
+                <p id="resultadoDecimalHex"></p>
+                <p id="resultadohexBinario"></p>
+            </div>
         </div>
     </main>
     <footer>
         Página web criada por Gabriel Euripedes Vieira Correa
     </footer>
+    <script>
+        function decimalParaBinario(decimal) {
+            return parseInt(decimal).toString(2);
+        }
+        function binarioParaDecimal(binario) {
+            var decimal = 0;
+            var posicao = 0;
+            while (binario > 0) {
+                var digito = binario % 10;
+                decimal += digito * Math.pow(2, posicao);
+                binario = Math.floor(binario / 10);
+                posicao++;
+            }
+            return decimal;
+        }
+        function decimalParaHexadecimal(decimal) {
+            return parseInt(decimal).toString(16).toUpperCase();
+        }
+        function hexadecimalParaDecimal(hexadecimal) {
+            return parseInt(hexadecimal, 16);
+        }
+
+        function converterBinDec() {
+            var binario = document.getElementById("binario").value;
+            var decimal = binarioParaDecimal(binario);
+            var hex = decimalParaHexadecimal(decimal);
+            document.getElementById("resultadoDecimal").textContent = "Decimal: " + decimal;
+            document.getElementById("resultadobinHexadecimal").textContent = "Hexadecimal: " + hex;
+        }
+        function converterDecBin() {
+            var decimal = document.getElementById("decimal").value;
+            var binario = decimalParaBinario(decimal);
+            document.getElementById("resultadoBinario").textContent = "Binário: " + binario;
+
+            var decimal = document.getElementById("decimal").value;
+            var hex = decimalParaHexadecimal(decimal);
+            document.getElementById("resultadoHexadecimal").textContent = "Hexadecimal: " + hex;
+        }
+        function converterDecHex() {
+            var decimal = document.getElementById("decimalHex").value;
+            var hex = decimalParaHexadecimal(decimal);
+            document.getElementById("resultadoHexadecimal").textContent = "Hexadecimal: " + hex;
+        }
+        function converterHexDec() {
+            var hex = document.getElementById("hexadecimalDec").value;
+            var decimal = hexadecimalParaDecimal(hex);
+            var binario = decimalParaBinario(decimal);
+            document.getElementById("resultadoDecimalHex").textContent = "Decimal: " + decimal;
+            document.getElementById("resultadohexBinario").textContent = "Binário: " + binario;
+        }
+    </script>
 </body>
 
 </html>
